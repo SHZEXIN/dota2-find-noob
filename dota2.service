@@ -1,0 +1,39 @@
+[Unit]
+Description=Dota2 历史同局查询 Web 服务
+Documentation=file:/opt/dota2-intersect/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dota2-intersect
+
+# 监听所有网卡的 8765 端口
+Environment=D2D_HOST=0.0.0.0
+Environment=D2D_PORT=8765
+Environment=TZ=Asia/Shanghai
+Environment=PYTHONUNBUFFERED=1
+
+ExecStart=/usr/bin/python3 -u /opt/dota2-intersect/standalone_server.py --no-open
+
+# 崩溃自动重启
+Restart=always
+RestartSec=3
+
+# 日志走 journald
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dota2
+
+# --- 可选：加认证后再取消下面注释 ---
+# Environment=D2D_USER=youruser
+# Environment=D2D_PASS=yourpassword
+
+# --- 基础加固 ---
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

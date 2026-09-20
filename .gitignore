@@ -1,0 +1,19 @@
+# 本地测试脚本（不随仓库分发）
+tests/
+.tmp/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 部署压缩包（改用 GitHub Release 发布）
+*.zip
+
+# WorkBuddy 项目数据
+.workbuddy-ai/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

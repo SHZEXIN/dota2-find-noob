@@ -1,0 +1,8 @@
+# 部署脚本与 systemd 单元必须在 Linux 上以 LF 运行，
+# 否则会出现 bad interpreter: /bin/bash^M
+*.sh      text eol=lf
+*.service text eol=lf
+
+# 源码与文档统一 LF，避免跨平台 diff 噪音
+*.py      text eol=lf
+*.md      text eol=lf
