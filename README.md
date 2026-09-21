@@ -1,4 +1,5 @@
 # Dota2 历史同局查询
+（coded by ds v4 flash）
 
 输入两位 Dota2 玩家的 ID，查出他们**历史上同局过哪些比赛**——给出比赛编号、时间、双方阵容（10 人完整身份）与胜负。
 
@@ -42,7 +43,7 @@ unzip dota2-direct-deploy.zip -d dota2 && cd dota2
 sudo STRATZ_TOKEN=你的令牌 bash install.sh     # 一键装成 systemd 服务
 ```
 
-详见 `部署说明-直接部署.md`。
+
 
 ## 环境变量
 
