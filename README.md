@@ -31,6 +31,9 @@ python standalone_server.py --port 9000 --host 0.0.0.0 --no-open
 
 仅依赖 Python 标准库，无需 `pip install`。
 
+使用STRATZ数据源需要配置key，然后windows配置环境变量STRATZ_TOKEN=key
+STRATZ的key从https://stratz.com/申请，个人有免费额度
+
 ## 部署到服务器
 
 ```bash
