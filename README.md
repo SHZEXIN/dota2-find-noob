@@ -32,6 +32,7 @@ python standalone_server.py --port 9000 --host 0.0.0.0 --no-open
 仅依赖 Python 标准库，无需 `pip install`。
 
 使用STRATZ数据源需要配置key，然后windows配置环境变量STRATZ_TOKEN=key
+
 STRATZ的key从https://stratz.com/
 
 ## 部署到服务器
@@ -75,8 +76,6 @@ python build_standalone.py
 | `standalone_server.py` | 构建产物（部署时只需这一个） |
 | `start.sh` | 前台启动（排障用） |
 | `install.sh` / `dota2.service` | systemd 一键部署 |
-| `部署说明-直接部署.md` | 详细部署与排障 |
-| `handoff.md` | 项目交接说明（架构要点、踩坑备忘） |
 
 ## 注意
 
